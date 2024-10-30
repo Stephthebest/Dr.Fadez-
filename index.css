@@ -1,0 +1,374 @@
+*,::before,::after{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+}
+
+html{
+      min-height: 100vh;
+}
+
+body{
+      background-image: url(images/shopPicOne.jpeg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100%;
+      padding: auto 2rem;
+}
+
+body::before{
+       content: "";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(66, 66, 66);
+      opacity: .9;
+      z-index: -1; 
+}
+
+
+header{
+      margin: auto;
+      padding: 1rem 1rem;
+}
+
+#logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 150px;
+      max-height: 200px;
+      border-radius: 20%;
+}
+
+
+hr{
+      width: 80%;
+      margin: 2rem auto;
+      border: 1.5px solid rgba(254, 254, 254, 0.383);
+      border-radius: 50%;
+}
+
+main{
+      margin-top: .5rem;
+      padding: 1rem 1rem;
+      max-width: 100%;
+      height: auto;  
+}
+
+
+/* All Section shared styles */
+section{
+      width: 100%;
+}
+
+/*  */
+
+h1{
+      margin-bottom: .5rem;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-size: 1.7rem;
+      background-color: whitesmoke;
+      background-image: linear-gradient(360deg,rgb(34, 255, 6), white 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 15px rgb(34,255,6);
+      
+}
+
+#mission{
+      height: auto;
+}
+
+#mission-message{ 
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      font-size: .9rem;
+      font-style: normal;
+      text-align: center;
+      padding: .3rem 1.5rem;
+      margin-top: 1rem;
+      color: white;
+      cursor: none;
+}
+
+/* Images Gallery */
+
+h2{
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-size: 1.7rem;
+      background-color: whitesmoke;
+      background-image: linear-gradient(360deg,rgb(34, 255, 6), white 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 15px rgb(34,255,6);
+}
+
+#image-gallery{
+      margin-top: 4rem;
+      padding: 1rem 2rem;   
+      width: 100%;
+      height: auto;
+      margin: auto;
+      position: relative;
+      
+}
+
+.images {
+      display: none;
+      max-width: 100%;
+      max-height: 500px;
+      margin: auto;
+      object-fit: cover;      
+     border-radius: 10px;
+     box-shadow: 3px 2px 5px white;
+     
+}
+
+
+
+#image-gallery-btns{
+      
+      max-width: 50%;
+      margin: auto;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+}
+
+
+
+#prevButton, #nextButton {
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      position: relative;
+      border-radius: 50%;
+      background-image: linear-gradient(360deg,rgb(34, 255, 6), white 80%);
+}
+
+
+
+#prevButton::before{
+      content: "\21E6";
+      position: absolute;
+      margin-left: 9px;
+      margin-top: 12px;
+      animation: slide1 1s ease-in-out infinite;
+}
+
+
+#nextButton::before{
+      content: "\21E8";
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 12px;
+      animation: slide2 1s ease-in-out infinite;
+}
+
+
+@keyframes slide1 {
+      0%,
+      100%{
+            transform: translate(0,0);
+      }
+      50%{
+            transform: translate(10px,0);
+      }
+}
+
+@keyframes slide2 {
+      0%,
+      100%{
+            transform: translate(0,0);
+      }
+      50%{
+            transform: translate(10px,0);
+      }
+}
+
+
+/* Booking Section */
+
+#booking-section{
+      width: 100%;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+}
+
+
+h3{
+      margin-bottom: 1rem;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-size: 1.4rem;
+      background-color: whitesmoke;
+      background-image: linear-gradient(360deg,rgb(34, 255, 6), white 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 10px rgb(34,255,6);
+}
+
+
+#booking-section p {
+ color: white;
+ text-align: center;
+ padding: 1rem 2rem;
+ margin-bottom: 1rem;
+}
+
+#booking-section p:nth-of-type(2){
+      margin-top: 1rem;
+}
+
+#booksy-btn{
+      display: block;
+      width: 200px;
+      margin: auto;
+      background-color: rgb(114, 211, 224);
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+}
+
+#booksy-btn img {
+      width: 200px;
+      
+}
+
+#qr-code{
+      display: block;
+      width: 200px;
+      height: 150px;
+      margin: auto;
+}
+
+
+/* Footer */
+
+footer{
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: .5rem;
+}
+
+ strong{
+      text-decoration: underline;
+      text-decoration-color: white;
+      margin-bottom: .4rem;
+}
+
+#location-contact{
+      list-style: none;
+      color: white;
+      font-size: 12px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: .5rem;
+}
+
+#shop-address{
+      display: flex;
+      flex-direction: column;
+}
+
+
+#phone-number-email{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+}
+
+#phone-number-email a{
+color: white;
+font-size: .7rem;
+}
+
+#phone-number-email a:first-of-type{
+      margin-bottom: .2rem;
+}
+
+/* Social media list */
+
+#social-media-list{
+      list-style: none;
+      display: flex;
+      width: 100%;
+      margin-top: 1rem;
+      align-items: center;
+}
+
+.social-icons{
+      width: 30px;
+      height: 30px;
+}
+
+
+#social-text{
+      color: white;
+      margin-top: .3rem;
+      font-size: .8rem;
+      text-decoration-line: underline;
+}
+
+
+#social-media-list li:first-of-type {
+      margin-right: .5rem;
+}
+
+
+
+@media screen and (min-width: 481px) {
+header, main {
+      padding-left: 3rem ;
+      padding-right: 3rem;
+}
+
+
+    hr{
+      width: 60%;
+    }
+
+
+    #mission-message{
+   width: 60%;
+   margin: auto;
+    }
+
+      #image-gallery{
+            padding: 1rem 3rem;
+      }
+
+      #image-gallery-btns{
+            justify-content: space-evenly;
+      }
+
+
+
+      strong, #social-text{
+            font-size: 1.1rem;
+      }
+
+      .span-address{
+            font-size: .8rem;
+      }
+}
